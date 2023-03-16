@@ -13,7 +13,11 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(
           title: Center(child: const Text('DE-TECH')),
-          backgroundColor: Color.fromARGB(232, 87, 24, 246),
+          backgroundColor: const Color.fromARGB(232, 122, 32, 233),
+        ),
+        floatingActionButton: ElevatedButton(
+          onPressed: () {},
+          child: const Text('yegd debfube c ce'),
         ),
       ),
     );
