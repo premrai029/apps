@@ -15,9 +15,15 @@ class MyApp extends StatelessWidget {
           title: Center(child: const Text('DE-TECH')),
           backgroundColor: const Color.fromARGB(232, 122, 32, 233),
         ),
-        floatingActionButton: ElevatedButton(
-          onPressed: () {},
-          child: const Text('yegd debfube c ce'),
+        body: Row(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            Expanded(
+                child: ElevatedButton(
+              onPressed: () {},
+              child: const Text('get it'),
+            ))
+          ],
         ),
       ),
     );
