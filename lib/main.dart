@@ -35,13 +35,53 @@ class MyApp extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 Expanded(
-                    child: Padding(
-                  padding: const EdgeInsets.all(100),
-                  child: ElevatedButton(
-                    onPressed: () {},
-                    child: const Text('get it'),
+                  child: SizedBox(
+                    child: ElevatedButton(
+                      onPressed: () {},
+                      child: const Text('get it'),
+                    ),
                   ),
-                ))
+                ),
+                Expanded(
+                  child: SizedBox(
+                    child: ElevatedButton(
+                      onPressed: () {},
+                      child: const Text('get it'),
+                    ),
+                  ),
+                ),
+                Expanded(
+                  child: SizedBox(
+                    child: ElevatedButton(
+                      onPressed: () {},
+                      child: const Text('get it'),
+                    ),
+                  ),
+                ),
+                Expanded(
+                  child: SizedBox(
+                    child: ElevatedButton(
+                      onPressed: () {},
+                      child: const Text('get it'),
+                    ),
+                  ),
+                ),
+                Expanded(
+                  child: SizedBox(
+                    child: ElevatedButton(
+                      onPressed: () {},
+                      child: const Text('get it'),
+                    ),
+                  ),
+                ),
+                Expanded(
+                  child: SizedBox(
+                    child: ElevatedButton(
+                      onPressed: () {},
+                      child: const Text('get it'),
+                    ),
+                  ),
+                )
               ],
             ),
           ])),
