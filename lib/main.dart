@@ -1,41 +1,39 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(MyApp());
-}
+void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      title: 'MyApp',
       home: Scaffold(
-          appBar: AppBar(
-            title: Center(child: const Text('DE-TECH')),
-            backgroundColor: const Color.fromARGB(232, 122, 32, 233),
-          ),
-          body: Stack(children: [
-            Image.asset(
-              'assets/images/one.jpg',
-              fit: BoxFit.cover,
-              height: double.infinity,
-              width: double.infinity,
+        body: CustomScrollView(
+          slivers: <Widget>[
+            SliverAppBar(
+              expandedHeight:
+                  200, // Set the height of the app bar when expanded
+              flexibleSpace: FlexibleSpaceBar(
+                background: Image.asset(
+                  'assets/get.jpg', // Set the image path here
+                  fit: BoxFit
+                      .cover, // Set the image fit to cover the entire app bar
+                ),
+                title: const Text(
+                    'MyApp'), // Add any other widgets you want to show on the app bar
+              ),
             ),
-            Row(
-              crossAxisAlignment: CrossAxisAlignment.stretch,
-              children: [
-                Expanded(
-                    child: Padding(
-                  padding: const EdgeInsets.all(100),
-                  child: ElevatedButton(
-                    onPressed: () {},
-                    child: const Text('get it'),
-                  ),
-                ))
-              ],
+            const SliverFillRemaining(
+              child: Center(
+                child: Text(
+                  'Hello, World!',
+                  style: TextStyle(fontSize: 24),
+                ),
+              ),
             ),
-          ])),
+          ],
+        ),
+      ),
     );
   }
 }
