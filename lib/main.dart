@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -11,10 +11,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
+          extendBody: true,
           appBar: AppBar(
             title: const Center(child: Text('DE-TECH')),
             backgroundColor: Colors.transparent,
-            elevation: 0,
+            elevation: 0, //removes shadow from appbar
             flexibleSpace: Container(
               decoration: const BoxDecoration(
                 image: DecorationImage(
@@ -22,7 +23,25 @@ class MyApp extends StatelessWidget {
                   fit: BoxFit.cover,
                 ),
               ),
-            ), //removes shadow from appbar
+            ),
+          ),
+          bottomNavigationBar: BottomNavigationBar(
+            backgroundColor: Colors.transparent,
+            elevation: 0,
+            items: const [
+              BottomNavigationBarItem(
+                icon: Icon(Icons.assignment_outlined),
+                label: 'My Logs',
+              ),
+              BottomNavigationBarItem(
+                icon: Icon(Icons.backpack),
+                label: 'Inventory',
+              ),
+              BottomNavigationBarItem(
+                icon: Icon(Icons.backpack),
+                label: 'Inventory',
+              ),
+            ],
           ),
           body: Stack(children: [
             Image.asset(
@@ -32,7 +51,8 @@ class MyApp extends StatelessWidget {
               width: double.infinity,
             ),
             Row(
-              crossAxisAlignment: CrossAxisAlignment.stretch,
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.end,
               children: [
                 Expanded(
                   child: SizedBox(
