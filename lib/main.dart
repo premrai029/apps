@@ -34,12 +34,12 @@ class MyApp extends StatelessWidget {
                 label: 'My Logs',
               ),
               BottomNavigationBarItem(
-                icon: Icon(Icons.backpack),
-                label: 'Inventory',
+                icon: Icon(Icons.rocket_launch_outlined),
+                label: 'Events',
               ),
               BottomNavigationBarItem(
-                icon: Icon(Icons.backpack),
-                label: 'Inventory',
+                icon: Icon(Icons.tips_and_updates_outlined),
+                label: 'Others',
               ),
             ],
           ),
