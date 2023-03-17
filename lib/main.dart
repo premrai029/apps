@@ -12,12 +12,21 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
           appBar: AppBar(
-            title: Center(child: const Text('DE-TECH')),
-            backgroundColor: const Color.fromARGB(232, 122, 32, 233),
+            title: const Center(child: Text('DE-TECH')),
+            backgroundColor: Colors.transparent,
+            elevation: 0,
+            flexibleSpace: Container(
+              decoration: const BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage('assets/images/uio.jpg'),
+                  fit: BoxFit.cover,
+                ),
+              ),
+            ), //removes shadow from appbar
           ),
           body: Stack(children: [
             Image.asset(
-              'assets/images/one.jpg',
+              'assets/images/get.jpg',
               fit: BoxFit.cover,
               height: double.infinity,
               width: double.infinity,
