@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:yona/home_page.dart';
+import 'home_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,6 +11,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
+      title: 'DE-TECH',
       home: HomePage(),
     );
   }
